@@ -1,0 +1,6 @@
+public class CalculatorImpl extends java.rmi.server.UnicastRemoteObject implements Calculator{
+	public CalculatorImpl() 
+        throws java.rmi.RemoteException { 
+        super(); 
+    } 
+public long add(long a,long b)throws java.rmi.RemoteException{return a+b;}}
