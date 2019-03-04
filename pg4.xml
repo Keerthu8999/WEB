@@ -1,0 +1,4 @@
+require "rexml/document"
+file = File.new( "t0.xml" )
+doc = REXML::Document.new file
+doc.elements.each("//div[@class='entry']") { |element| puts element }
