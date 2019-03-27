@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+function load() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState === 4 && this.status === 200) {
+      myFunction(this);
+    }
+  };
+  xhttp.open("GET", "file.json", true);
+  xhttp.send();
+}
+function myFunction(xml) {
+  var i;
+  var xmlDoc = JSON.parse(xml.responseText)
+  var table = "CONTENTS";
+ // var table="<tr><th>Artist</th><th>Title</th></tr>";
+  var x = xmlDoc.getElementsByTagName("pets");
+  "<br>"
+  for (i = 0; i <x.length; i++) { 
+    table += 
+    x[i].getElementsByTagName("animal")[0].childNodes[0].nodeValue +
+    
+    x[i].getElementsByTagName("name")[0].childNodes[0].nodeValue ;
+    
+  }
+  alert(table);
+}
+
+
+</body>
+</html>

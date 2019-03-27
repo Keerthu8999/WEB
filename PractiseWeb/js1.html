@@ -1,0 +1,18 @@
+<html>
+<head>
+<title>JS</title>
+</head>
+<body>
+<script type = "text/javascript">
+var txtfile = "new 1.txt";
+addContents(txtFile,"HELLO");
+addContents(txtFile,"HELLO");addContents(txtFile,"HELLO");addContents(txtFile,"HELLO");
+function addContents(txtFile,texthere){
+	var file = new File(txtFile);
+	file.writeln(texthere);
+	file.close();
+	document.write("Success");
+	}
+</script>
+</body>
+</html>
