@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script>
+var lastt, tdiff;
+$( "p" ).click(function( event ) {
+  if (lastt) {
+  tdiff = event.timeStamp - lastt;
+  $( "div" ).append( "Time since last event: " + tdiff + "<br>" );
+   } 
+   else {
+     $( "div" ).append( "<br>Click again.<br>" );
+	   }
+	 lastt = event.timeStamp;
+	});
+$(document).ready(function(){
+$("input").on("keydown",function(event){
+$(this).html(event.type);
+});
+});
+
+</script>
+<p>This is paragraph</p>
+<div>THIS IS BLAHHH</div>
+<input type="text">hbvshb
+<button id = "hide">HIDE</button>
+<button id = "show">SHOW</button>
+<ul>
+<li>1st</li>
+<li>1st</li><li>1st</li><li>1st</li><li>1st</li>
+</ul>
+</body>
+</html>
